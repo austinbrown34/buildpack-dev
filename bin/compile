@@ -1,7 +1,4 @@
 #!/bin/bash
-pip install scikit-learn==0.16.1
-pip install scikits.talkbox
-easy_install simplejson
 
 indent() {
   sed -u 's/^/       /'
@@ -29,10 +26,7 @@ while read url; do
     fi
 
     curl -L --silent $url | tar x $flag
-    cd
-    echo ls
-    cd mlpy-3.5.0
-    python setup.py install
+
 
   fi
 done < .vendor_urls
