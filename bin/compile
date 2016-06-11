@@ -27,6 +27,7 @@ while read url; do
     fi
 
     curl -L --silent $url | tar x $flag
+    echo $1
     cd /mlpy-3.5.0/
     python setup.py install
     pip install scikit-learn==0.16.1
